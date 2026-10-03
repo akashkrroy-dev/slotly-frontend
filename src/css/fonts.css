@@ -1,0 +1,25 @@
+/* Poppins — variable font, weights 100-900 (Thin -> Black) */
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url("../assets/fonts/Poppins-Variable.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-style: italic;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url("../assets/fonts/Poppins-VariableItalic.woff2") format("woff2");
+}
+
+/* Clash Display — display/headings only, variable font, weights 200-700 (Extralight -> Bold). No italic cut. */
+@font-face {
+  font-family: "Clash Display";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 200 700;
+  src: url("../assets/fonts/ClashDisplay-Variable.woff2") format("woff2");
+}
