@@ -15,14 +15,10 @@ import Pricing from "./features/Home/pages/Pricing"
 import Contact from "./features/Home/pages/Contact"
 import CreateBusiness from "./features/Home/pages/CreateBusiness"
 
-//* OWNER
-import OwnerLayout from "./features/owner/layout"
-import Dashboard from "./features/owner/pages/Dashboard"
-import Workspace from "./features/owner/pages/Workspace"
-
-//* STORE
-import StorePageLayout from "./features/Store/Layout"
-import Home from "./features/Store/pages/Home"
+//* BUSINESS - MEMBER
+import BusinessLayout from "./features/Bussiness/Layout"
+import Dashboard from "./features/Bussiness/pages/Dashboard"
+import Home from "./features/Bussiness/pages/Home"
 
 const App = () => {
   return (
@@ -43,12 +39,11 @@ const App = () => {
             <Route path="/create-business" element={<CreateBusiness />} />
           </Route>
 
-          <Route path="/dashboard" element={<OwnerLayout />}>
+          <Route path="/dashboard" element={<BusinessLayout />}>
             <Route path="dashboard" element={<Dashboard />} />
-            <Route path="workspace" element={<Workspace />} />
           </Route>
 
-          <Route path="/:slug" element={<StorePageLayout />}>
+          <Route path="/:slug" element={<BusinessLayout />}>
             <Route index element={<Home />} />
           </Route>
 
