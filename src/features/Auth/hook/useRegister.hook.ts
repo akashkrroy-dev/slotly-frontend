@@ -81,7 +81,7 @@ const useRegister = () => {
       await verifyOtp({ email: form.email.trim(), otp })
       toast.success("Account verified")
       setShowOtpBox(false)
-      navigate("/dashboard/workspace", { replace: true })
+      navigate("/member/workspace", { replace: true })
     } catch (error) {
       setOtpError(getErrorMessage(error, "Invalid or expired code"))
     } finally {

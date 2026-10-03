@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import { Toaster } from "sonner"
+import { AuthProvider } from './context/AuthContext'
 import NotFound from "./components/global/NotFound"
 
 //* AUTH
@@ -18,6 +19,9 @@ import CreateBusiness from "./features/Home/pages/CreateBusiness"
 //* BUSINESS - MEMBER
 import BusinessLayout from "./features/Bussiness/Layout"
 import Dashboard from "./features/Bussiness/pages/Dashboard"
+import Workspace from "./features/Bussiness/pages/Workspace"
+
+//* BUSINESS - STORE
 import Home from "./features/Bussiness/pages/Home"
 
 const App = () => {
@@ -39,8 +43,9 @@ const App = () => {
             <Route path="/create-business" element={<CreateBusiness />} />
           </Route>
 
-          <Route path="/dashboard" element={<BusinessLayout />}>
+          <Route path="/memeber" element={<BusinessLayout />}>
             <Route path="dashboard" element={<Dashboard />} />
+            <Route path="workspace" element={<Workspace />} />
           </Route>
 
           <Route path="/:slug" element={<BusinessLayout />}>

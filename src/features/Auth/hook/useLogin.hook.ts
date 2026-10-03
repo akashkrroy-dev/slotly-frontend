@@ -46,7 +46,7 @@ const useLogin = () => {
       setLoading(true)
       await login(data)
       toast.success("Welcome back!")
-      navigate("/dashboard/workspace", { replace: true })
+      navigate("/member/workspace", { replace: true })
     } catch (error) {
       toast.error(getErrorMessage(error, "Login failed. Please try again."))
     } finally {

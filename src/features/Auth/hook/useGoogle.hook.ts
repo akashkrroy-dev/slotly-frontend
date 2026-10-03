@@ -102,7 +102,7 @@ const useGoogle = () => {
       await googleLogin({ idToken })
 
       toast.success("Signed in with Google")
-      navigate("/dashboard/workspace", { replace: true })
+      navigate("/member/workspace", { replace: true })
     } catch (error) {
       toast.error(
         getErrorMessage(error, "Google sign-in failed. Please try again.")
